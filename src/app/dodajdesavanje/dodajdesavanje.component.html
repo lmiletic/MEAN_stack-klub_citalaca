@@ -1,0 +1,84 @@
+<div class="prikaz">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <mat-card class="example-card" *ngIf="!isLoading">
+    <mat-card-header>
+      <mat-card-title>
+        Dodajte novo dešavanje
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-vertical-stepper linear="true" #stepper>
+        <mat-step [stepControl]="nazivFormGroup">
+          <form [formGroup]="nazivFormGroup">
+            <ng-template matStepLabel>Naziv dešavanja</ng-template>
+            <mat-form-field>
+              <mat-label>Naziv</mat-label>
+              <input matInput formControlName="nazivCtrl" required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperNext>Sledeći korak</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="tipFormGroup" label="Tip dešavanja">
+          <form [formGroup]="tipFormGroup">
+            <mat-form-field>
+              <mat-label>Tip</mat-label>
+              <mat-select  formControlName="tipCtrl" required>
+                <mat-option *ngFor="let tip of tipovi" value="{{tip}}">{{tip}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Nazad</button>
+              <button mat-button matStepperNext>Sledeći korak</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="pocetakFormGroup" label="Početak dešavanja">
+          <mat-checkbox (change)="disablePocetak($event.checked)">Aktivno odmah</mat-checkbox>
+          <form [formGroup]="pocetakFormGroup">
+            <mat-form-field>
+              <mat-label>Datum početka</mat-label>
+              <input matInput [matDatepicker]="picker1" formControlName="pocetakCtrl">
+              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+              <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Nazad</button>
+              <button mat-button matStepperNext>Sledeći korak</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="krajFormGroup" label="Kraj dešavanja">
+          <mat-checkbox (change)="disableKraj($event.checked)">Nije definisan kraj</mat-checkbox>
+          <form [formGroup]="krajFormGroup">
+            <mat-form-field>
+              <mat-label>Datum kraja</mat-label>
+              <input matInput [matDatepicker]="picker2" formControlName="krajCtrl">
+              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+              <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Nazad</button>
+              <button mat-button matStepperNext>Sledeći korak</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="opisFormGroup" label="Opis">
+          <form [formGroup]="opisFormGroup">
+            <mat-form-field>
+              <mat-label>Opis</mat-label>
+              <input matInput formControlName="opisCtrl" required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Nazad</button>
+              <button mat-button matStepperNext (click)="napravi(stepper)">Napravi dešavanje</button>
+            </div>
+          </form>
+        </mat-step>
+      </mat-vertical-stepper>
+      <span *ngIf="message">{{message}}</span>
+
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,9 @@
+<form class="example-form" (submit)="forgotPass()">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Unesite email adresu</mat-label>
+    <input matInput placeholder="pat@example.com" [formControl]="email" required>
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <span *ngIf="message!=''" [class]="sent ? 'green-message' : 'red-message'">{{message}}</span>
+  <button mat-stroked-button color="primary" type="submit">Resetuj šifru</button>
+</form>
