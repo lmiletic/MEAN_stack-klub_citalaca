@@ -1,0 +1,16 @@
+{
+    "_id" : ObjectId("5f5146546497e7329096f072"),
+    "autori" : [ 
+        "Den Braun"
+    ],
+    "zanrovi" : [ 
+        "Horor"
+    ],
+    "naziv" : "Inferno",
+    "datumIzdavanja" : ISODate("2020-09-29T22:00:00.000Z"),
+    "opis" : "Opis3",
+    "ocena" : "0",
+    "slika" : "http://localhost:3000/images/knjigeSlike/Knjiga.png",
+    "odobrena" : true,
+    "__v" : 0
+}

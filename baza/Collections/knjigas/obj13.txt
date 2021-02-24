@@ -1,0 +1,18 @@
+{
+    "_id" : ObjectId("5f557876bf623f3a181b13c9"),
+    "autori" : [ 
+        "Autor 1", 
+        "Autor 2", 
+        "Autor 3"
+    ],
+    "zanrovi" : [ 
+        "Biografija"
+    ],
+    "naziv" : "Knjiga 1",
+    "datumIzdavanja" : ISODate("2020-09-29T22:00:00.000Z"),
+    "opis" : "asdasd",
+    "ocena" : "0",
+    "slika" : "http://localhost:3000/images/knjigeSlike/Knjiga.png",
+    "odobrena" : true,
+    "__v" : 0
+}

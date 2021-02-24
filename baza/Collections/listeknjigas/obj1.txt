@@ -1,0 +1,33 @@
+{
+    "_id" : ObjectId("5f57c3b631f75e2f747ab052"),
+    "listaProcitane" : [ 
+        "5f53cfc740cf61226cc71f20", 
+        "5f46bbf208bcdd3ba4ac968a", 
+        "5f5146546497e7329096f072", 
+        "5f5290bacfac070b246ddf7a", 
+        "5f557876bf623f3a181b13c9", 
+        "5f5578f0bf623f3a181b13ca", 
+        "5f557966bf623f3a181b13cb"
+    ],
+    "listaTrenutno" : [ 
+        "5f51459e6497e7329096f071", 
+        "5f53d05a40cf61226cc71f21", 
+        "5f53d0e440cf61226cc71f22", 
+        "5f6137e9a0437c057435cf25", 
+        "5f6137258803263564f88397", 
+        "5f53d2b840cf61226cc71f24", 
+        "5f5409f1d5b3fd321800519e"
+    ],
+    "listaKasnije" : [],
+    "trenutnoPozicija" : [ 
+        "0:100", 
+        "107:350", 
+        "0:100", 
+        "50:100", 
+        "65:100", 
+        "60:100", 
+        "0:100"
+    ],
+    "korisnickoIme" : "lmiletic",
+    "__v" : 103
+}

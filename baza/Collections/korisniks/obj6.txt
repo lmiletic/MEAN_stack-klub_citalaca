@@ -1,0 +1,15 @@
+{
+    "_id" : ObjectId("5f652e35c661980ab4519123"),
+    "ime" : "Toma",
+    "prezime" : "Tomic",
+    "korisnickoIme" : "toma",
+    "lozinka" : "$2b$13$S/rrOfC7biprbL8N4SIXqeft3cF5CMbGzOmVezyFOChNWJpprspqm",
+    "datumRodjenja" : ISODate("2020-09-28T22:00:00.000Z"),
+    "drzava" : "Srbija",
+    "grad" : "Beograd",
+    "email" : "toma@email.com",
+    "tip" : "korisnik",
+    "slika" : "http://localhost:3000/images/korisniciSlike/Slika.png",
+    "odobren" : true,
+    "__v" : 0
+}

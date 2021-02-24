@@ -1,0 +1,17 @@
+{
+    "_id" : ObjectId("5f5aa6702fb02a31189ccf8d"),
+    "listaProcitane" : [ 
+        "5f5290bacfac070b246ddf7a", 
+        "5f51459e6497e7329096f071", 
+        "5f46bbf208bcdd3ba4ac968a"
+    ],
+    "listaTrenutno" : [ 
+        "5f53cfc740cf61226cc71f20"
+    ],
+    "listaKasnije" : [],
+    "trenutnoPozicija" : [ 
+        "35:100"
+    ],
+    "korisnickoIme" : "pera",
+    "__v" : 11
+}

@@ -1,0 +1,16 @@
+{
+    "_id" : ObjectId("5f51459e6497e7329096f071"),
+    "autori" : [ 
+        "Den Braun"
+    ],
+    "zanrovi" : [ 
+        "Horor"
+    ],
+    "naziv" : "Izgubljeni simboli",
+    "datumIzdavanja" : ISODate("2020-09-23T22:00:00.000Z"),
+    "opis" : "Opis2",
+    "ocena" : "9",
+    "slika" : "http://localhost:3000/images/knjigeSlike/Knjiga.png",
+    "odobrena" : true,
+    "__v" : 0
+}

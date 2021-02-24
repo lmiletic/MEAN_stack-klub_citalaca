@@ -1,0 +1,15 @@
+{
+    "_id" : ObjectId("5f540e03d5b3fd321800519f"),
+    "ime" : "Petar",
+    "prezime" : "Petorvic",
+    "korisnickoIme" : "pera",
+    "lozinka" : "$2b$13$6TpkjNifsnESuXodhK1T0ecY5GoMGWqfvZnbzX/EUtypKXzWa73XG",
+    "datumRodjenja" : ISODate("2020-09-07T22:00:00.000Z"),
+    "drzava" : "Rusija",
+    "grad" : "Petrograd",
+    "email" : "pera@gmail.com",
+    "tip" : "moderator",
+    "slika" : "http://localhost:3000/images/korisniciSlike/Slika.png",
+    "odobren" : true,
+    "__v" : 0
+}

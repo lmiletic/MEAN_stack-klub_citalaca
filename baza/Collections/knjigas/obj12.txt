@@ -1,0 +1,16 @@
+{
+    "_id" : ObjectId("5f5409f1d5b3fd321800519e"),
+    "autori" : [ 
+        "Fredrik Bakman"
+    ],
+    "zanrovi" : [ 
+        "Biografija"
+    ],
+    "naziv" : "Covek po imenu Uve",
+    "datumIzdavanja" : ISODate("2020-09-25T22:00:00.000Z"),
+    "opis" : "opis10",
+    "ocena" : "10",
+    "slika" : "http://localhost:3000/images/knjigeSlike/Knjiga.png",
+    "odobrena" : true,
+    "__v" : 0
+}

@@ -1,0 +1,18 @@
+{
+    "_id" : ObjectId("5f5375d87823ab47a223c12e"),
+    "zanrovi" : [ 
+        "Akcioni", 
+        "Biografija", 
+        "Drama", 
+        "Edukativni", 
+        "Fantastika", 
+        "Horor", 
+        "Internet i racunari", 
+        "Istorija", 
+        "Kriminalistika", 
+        "Ljubavni", 
+        "Komedija", 
+        "Triler"
+    ],
+    "__v" : 4
+}

@@ -1,0 +1,16 @@
+{
+    "_id" : ObjectId("5f46bbf208bcdd3ba4ac968a"),
+    "autori" : [ 
+        "Den Braun"
+    ],
+    "zanrovi" : [ 
+        "Edukativni"
+    ],
+    "naziv" : "Davincijev kod",
+    "datumIzdavanja" : ISODate("2020-08-12T22:00:00.000Z"),
+    "opis" : "Opis opis",
+    "ocena" : "6.5",
+    "slika" : "http://localhost:3000/images/knjigeSlike/Davincijevkod1600456181445Slika.jpg",
+    "odobrena" : true,
+    "__v" : 14
+}

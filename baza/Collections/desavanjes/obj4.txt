@@ -1,0 +1,10 @@
+{
+    "_id" : ObjectId("5f6689395685cc2e9c8f28a4"),
+    "naziv" : "Desavanje 4",
+    "tip" : "privatno",
+    "datumPocetka" : ISODate("2020-09-15T22:00:00.000Z"),
+    "datumKraja" : ISODate("2020-09-17T22:00:00.000Z"),
+    "opis" : "Opis 4",
+    "korisnickoIme" : "lmiletic",
+    "__v" : 0
+}

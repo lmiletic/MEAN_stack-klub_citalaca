@@ -1,0 +1,9 @@
+{
+    "_id" : ObjectId("5f6253424422602278d23d51"),
+    "listaProcitane" : [],
+    "listaTrenutno" : [],
+    "listaKasnije" : [],
+    "trenutnoPozicija" : [],
+    "korisnickoIme" : "milos",
+    "__v" : 0
+}

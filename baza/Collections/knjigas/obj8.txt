@@ -1,0 +1,17 @@
+{
+    "_id" : ObjectId("5f53d23c40cf61226cc71f23"),
+    "autori" : [ 
+        "Fjodor Mihailovic Dostojevski"
+    ],
+    "zanrovi" : [ 
+        "Drama", 
+        "Istorija"
+    ],
+    "naziv" : "Idiot",
+    "datumIzdavanja" : ISODate("2020-09-25T22:00:00.000Z"),
+    "opis" : "Opis6",
+    "ocena" : "0",
+    "slika" : "http://localhost:3000/images/knjigeSlike/Knjiga.png",
+    "odobrena" : true,
+    "__v" : 0
+}

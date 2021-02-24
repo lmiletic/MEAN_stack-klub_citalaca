@@ -1,0 +1,17 @@
+{
+    "_id" : ObjectId("5f5290bacfac070b246ddf7a"),
+    "autori" : [ 
+        "Dz. K. Rouling"
+    ],
+    "zanrovi" : [ 
+        "Horor", 
+        "Ljubavni"
+    ],
+    "naziv" : "Hari Poter",
+    "datumIzdavanja" : ISODate("2019-06-03T22:00:00.000Z"),
+    "opis" : "Opis 4",
+    "ocena" : "6",
+    "slika" : "http://localhost:3000/images/knjigeSlike/Knjiga.png",
+    "odobrena" : true,
+    "__v" : 0
+}

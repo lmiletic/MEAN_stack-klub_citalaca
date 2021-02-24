@@ -1,0 +1,15 @@
+{
+    "_id" : ObjectId("5f6257e74422602278d23d54"),
+    "ime" : "Zika",
+    "prezime" : "Zikic",
+    "korisnickoIme" : "zika",
+    "lozinka" : "$2b$13$ndsmpJ2B.Rx1pUTPgwjcUeov48qmWX4qIy.bxi.0T3lcDFU02ibLy",
+    "datumRodjenja" : ISODate("2020-09-27T22:00:00.000Z"),
+    "drzava" : "Srbija",
+    "grad" : "Valjevo",
+    "email" : "zika@email.com",
+    "tip" : "korisnik",
+    "slika" : "http://localhost:3000/images/korisniciSlike/Slika.png",
+    "odobren" : true,
+    "__v" : 0
+}

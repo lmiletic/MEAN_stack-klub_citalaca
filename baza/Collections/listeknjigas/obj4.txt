@@ -1,0 +1,15 @@
+{
+    "_id" : ObjectId("5f6367942c36031ad446ef04"),
+    "listaProcitane" : [ 
+        "5f5409f1d5b3fd321800519e"
+    ],
+    "listaTrenutno" : [ 
+        "5f53d05a40cf61226cc71f21"
+    ],
+    "listaKasnije" : [],
+    "trenutnoPozicija" : [ 
+        "320:350"
+    ],
+    "korisnickoIme" : "kris97",
+    "__v" : 5
+}

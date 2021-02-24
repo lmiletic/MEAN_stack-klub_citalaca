@@ -1,0 +1,15 @@
+{
+    "_id" : ObjectId("5f6259e24422602278d23d55"),
+    "ime" : "Mika",
+    "prezime" : "Mikic",
+    "korisnickoIme" : "mika",
+    "lozinka" : "$2b$13$lXsaxPYuKKEflAgPKdyJ3OIs6QuW0DFYsP0CxPwUnG58KRtRwgDC.",
+    "datumRodjenja" : null,
+    "drzava" : "Bugarska",
+    "grad" : "Sofija",
+    "email" : "mika@email.com",
+    "tip" : "korisnik",
+    "slika" : "http://localhost:3000/images/korisniciSlike/Slika.png",
+    "odobren" : true,
+    "__v" : 0
+}

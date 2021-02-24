@@ -1,0 +1,8 @@
+{
+    "_id" : ObjectId("5f5a8fca2fb02a31189ccf8b"),
+    "korisnickoIme" : "lmiletic",
+    "knjigaId" : "5f51459e6497e7329096f071",
+    "komentar" : "SUPER",
+    "ocena" : 8,
+    "__v" : 0
+}

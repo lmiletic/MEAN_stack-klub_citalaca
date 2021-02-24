@@ -1,0 +1,8 @@
+{
+    "_id" : ObjectId("5f5aa6a52fb02a31189ccf8e"),
+    "korisnickoIme" : "pera",
+    "knjigaId" : "5f5290bacfac070b246ddf7a",
+    "komentar" : "Bez veze!",
+    "ocena" : 2,
+    "__v" : 0
+}

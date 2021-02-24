@@ -1,0 +1,10 @@
+{
+    "_id" : ObjectId("5f6672b344239c38a025a33b"),
+    "naziv" : "Naziv 3",
+    "tip" : "privatno",
+    "datumPocetka" : ISODate("2020-09-17T22:00:00.000Z"),
+    "datumKraja" : null,
+    "opis" : "Opis",
+    "korisnickoIme" : "milos",
+    "__v" : 0
+}

@@ -1,0 +1,7 @@
+{
+    "_id" : ObjectId("5f6367822c36031ad446ef03"),
+    "korisnickoIme" : "kris97",
+    "lastLogin" : ISODate("2020-09-17T22:06:17.058Z"),
+    "lastLogout" : ISODate("2020-09-17T22:06:33.668Z"),
+    "__v" : 0
+}

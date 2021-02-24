@@ -1,0 +1,17 @@
+{
+    "_id" : ObjectId("5f53d0e440cf61226cc71f22"),
+    "autori" : [ 
+        "Branko Copic"
+    ],
+    "zanrovi" : [ 
+        "Drama", 
+        "Istorija"
+    ],
+    "naziv" : "Orlovi rano lete",
+    "datumIzdavanja" : ISODate("2020-06-15T22:00:00.000Z"),
+    "opis" : "Opis6",
+    "ocena" : "0",
+    "slika" : "http://localhost:3000/images/knjigeSlike/Knjiga.png",
+    "odobrena" : true,
+    "__v" : 0
+}

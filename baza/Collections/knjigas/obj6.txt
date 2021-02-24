@@ -1,0 +1,16 @@
+{
+    "_id" : ObjectId("5f53d05a40cf61226cc71f21"),
+    "autori" : [ 
+        "Johana Spiri"
+    ],
+    "zanrovi" : [ 
+        "Fantastika"
+    ],
+    "naziv" : "Hajdi",
+    "datumIzdavanja" : ISODate("2020-09-23T22:00:00.000Z"),
+    "opis" : "Opis6",
+    "ocena" : "10",
+    "slika" : "http://localhost:3000/images/knjigeSlike/Knjiga.png",
+    "odobrena" : true,
+    "__v" : 0
+}

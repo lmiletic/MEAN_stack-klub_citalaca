@@ -1,0 +1,15 @@
+{
+    "_id" : ObjectId("5f61099cef7ec926481f6cad"),
+    "ime" : "Milos",
+    "prezime" : "Milosevic",
+    "korisnickoIme" : "milos",
+    "lozinka" : "$2b$13$Rkxy6YOt76lIEuLBVBlbZe5nOTGU0XrFBXKkP5dWGkDcml.pPuvqu",
+    "datumRodjenja" : ISODate("1998-06-01T22:00:00.000Z"),
+    "drzava" : "Srbija",
+    "grad" : "Leskovac",
+    "email" : "milos@email.com",
+    "tip" : "korisnik",
+    "slika" : "http://localhost:3000/images/korisniciSlike/milos1600194971929Slika.png",
+    "odobren" : true,
+    "__v" : 0
+}

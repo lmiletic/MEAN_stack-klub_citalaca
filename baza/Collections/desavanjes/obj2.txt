@@ -1,0 +1,10 @@
+{
+    "_id" : ObjectId("5f66722f44239c38a025a33a"),
+    "naziv" : "Desavanje 2",
+    "tip" : "javno",
+    "datumPocetka" : null,
+    "datumKraja" : null,
+    "opis" : "Opis 2",
+    "korisnickoIme" : "lmiletic",
+    "__v" : 0
+}

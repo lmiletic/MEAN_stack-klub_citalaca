@@ -1,0 +1,17 @@
+{
+    "_id" : ObjectId("5f53d31940cf61226cc71f25"),
+    "autori" : [ 
+        "Ivo Andric"
+    ],
+    "zanrovi" : [ 
+        "Biografija", 
+        "Istorija"
+    ],
+    "naziv" : "Znakovi pored puta",
+    "datumIzdavanja" : ISODate("2020-09-18T22:00:00.000Z"),
+    "opis" : "Opis9",
+    "ocena" : "0",
+    "slika" : "http://localhost:3000/images/knjigeSlike/Knjiga.png",
+    "odobrena" : true,
+    "__v" : 0
+}

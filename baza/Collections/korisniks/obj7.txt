@@ -1,0 +1,15 @@
+{
+    "_id" : ObjectId("5f66b4225685cc2e9c8f28a5"),
+    "ime" : "Branko",
+    "prezime" : "Brankovic",
+    "korisnickoIme" : "branko",
+    "lozinka" : "$2b$13$D0bvZ76Upk1BJ9d8PxXV6u4cE87WuRUbtcHLD4F9UrSpk21s.Z8hi",
+    "datumRodjenja" : ISODate("2020-09-29T22:00:00.000Z"),
+    "drzava" : "Srbija",
+    "grad" : "Beograd",
+    "email" : "branko@email.com",
+    "tip" : "korisnik",
+    "slika" : "http://localhost:3000/images/korisniciSlike/branko1600566305864Slika.png",
+    "odobren" : true,
+    "__v" : 0
+}

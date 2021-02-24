@@ -1,0 +1,16 @@
+{
+    "_id" : ObjectId("5f6137e9a0437c057435cf25"),
+    "autori" : [ 
+        "Autor 4"
+    ],
+    "zanrovi" : [ 
+        "Akcioni"
+    ],
+    "naziv" : "Knjiga 4",
+    "datumIzdavanja" : ISODate("2020-09-24T22:00:00.000Z"),
+    "opis" : "Opis 16",
+    "ocena" : "0",
+    "slika" : "http://localhost:3000/images/knjigeSlike/Knjiga.png",
+    "odobrena" : true,
+    "__v" : 0
+}

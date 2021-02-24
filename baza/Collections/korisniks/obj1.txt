@@ -1,0 +1,15 @@
+{
+    "_id" : ObjectId("5f4d5719b3e22d2dc0994105"),
+    "ime" : "Luka",
+    "prezime" : "Miletic",
+    "korisnickoIme" : "lmiletic",
+    "lozinka" : "$2b$13$YdaI0/XTA0aNjEQhF1QwbubnHLjH6dwh5Lni8QYfJoddp8jGM7K5C",
+    "datumRodjenja" : ISODate("1997-05-11T22:00:00.000Z"),
+    "drzava" : "Srbija",
+    "grad" : "Velika Plana",
+    "email" : "lmiletic97@gmail.com",
+    "tip" : "admin",
+    "slika" : "http://localhost:3000/images/korisniciSlike/lmiletic1598904088790Slika.jpg",
+    "odobren" : true,
+    "__v" : 0
+}

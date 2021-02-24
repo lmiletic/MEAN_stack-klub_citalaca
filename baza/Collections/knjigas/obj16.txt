@@ -1,0 +1,17 @@
+{
+    "_id" : ObjectId("5f6137258803263564f88397"),
+    "autori" : [ 
+        "Fjodor Mihailovic Dostojevski"
+    ],
+    "zanrovi" : [ 
+        "Drama", 
+        "Kriminalistika"
+    ],
+    "naziv" : "Zlocin i kazna",
+    "datumIzdavanja" : ISODate("1974-02-11T23:00:00.000Z"),
+    "opis" : "Opis 15",
+    "ocena" : "5",
+    "slika" : "http://localhost:3000/images/knjigeSlike/Knjiga.png",
+    "odobrena" : true,
+    "__v" : 0
+}
