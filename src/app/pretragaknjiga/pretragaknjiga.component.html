@@ -1,0 +1,94 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+
+<div class="prikaz">
+  <mat-card class="example-card" *ngIf="!isLoading && !pretraga">
+    <mat-card-header>
+      <mat-card-title>Pretraga knjiga</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="example-form" [formGroup]="formGroup" (submit)="pretrazi()">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Naziv knjige</mat-label>
+          <input type="text"
+                 aria-label="naziv"
+                 matInput
+                 formControlName="naziv"
+                 [matAutocomplete]="auto1">
+          <mat-autocomplete autoActiveFirstOption #auto1="matAutocomplete">
+            <mat-option *ngFor="let knjiga of filteredNaziv | async | slice :0:3" [value]="knjiga.naziv">
+              <img class="example-option-img" aria-hidden [src]="knjiga.slika" height="25">
+              <span>{{knjiga.naziv}}</span>
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Naziv autora</mat-label>
+          <input type="text"
+                 aria-label="autor"
+                 matInput
+                 formControlName="autor"
+                 [matAutocomplete]="auto2">
+          <mat-autocomplete autoActiveFirstOption #auto2="matAutocomplete">
+            <mat-option *ngFor="let autor of filteredAutor | async | slice :0:3" [value]="autor">
+              {{autor}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Izaberite žanr</mat-label>
+          <mat-select formControlName="zanrovi">
+            <mat-option *ngFor="let zanr of zanrovi" [value]="zanr">
+              {{zanr}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-stroked-button color="accent" type="submit">Pretraži</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div class="prikaz">
+  <mat-card  class="tabela" *ngIf="!isLoading && pretraga">
+    <mat-card-content>
+      <button mat-flat-button color="accent" style="margin:8px;" type="button" (click)="nazad()">Nazad</button>
+      <mat-paginator [length]="brojKnjiga" [pageSize]="poStrani" [pageSizeOptions]="biranjePregleda" (page)="promenaStrane($event)"></mat-paginator>
+      <table mat-table [dataSource]="knjigePoStrani">
+
+        <ng-container matColumnDef="naziv">
+          <th mat-header-cell *matHeaderCellDef> Naziv </th>
+          <td mat-cell *matCellDef="let knjiga" [class]="knjiga.odobrena?'':'not_approved'"> {{knjiga.naziv}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="autori">
+          <th mat-header-cell *matHeaderCellDef> Autori </th>
+          <td mat-cell *matCellDef="let knjiga" [class]="knjiga.odobrena?'':'not_approved'"> {{knjiga.autori}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="zanrovi">
+          <th mat-header-cell *matHeaderCellDef> Zanrovi </th>
+          <td mat-cell *matCellDef="let knjiga" [class]="knjiga.odobrena?'':'not_approved'"> {{knjiga.zanrovi}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="datumIzdavanja">
+          <th mat-header-cell *matHeaderCellDef> Datum izdavanja </th>
+          <td mat-cell *matCellDef="let knjiga" [class]="knjiga.odobrena?'':'not_approved'"> {{knjiga.datumIzdavanja | date:'dd/MM/yyyy'}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ocena">
+          <th mat-header-cell *matHeaderCellDef> Ocena </th>
+          <td mat-cell *matCellDef="let knjiga" [class]="knjiga.odobrena?'':'not_approved'">
+            <star-rating [value]="zaokruziOcenu(knjiga.ocena)" [totalstars]="10" size="16px" checkedcolor="gold" [uncheckedcolor]="knjiga.odobrena?'gray':'lightgray'" readonly="true"></star-rating>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="prikazKolona"></tr>
+        <tr mat-row *matRowDef="let knjiga; columns: prikazKolona;" (click)="knjigaPrikaz($event, knjiga)"></tr>
+      </table>
+      <div *ngIf="knjigePretraga.length==0 && isLogged()">
+        <a routerLink="../dodajknjigu">Dodaj knjigu</a>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+

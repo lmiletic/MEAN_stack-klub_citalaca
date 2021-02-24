@@ -1,0 +1,60 @@
+.example-full-width {
+  width: 100%;
+}
+
+.example-card {
+  margin: 20px;
+  max-width: 400px;
+}
+
+.mat-row {
+  height: auto;
+}
+
+table{
+  width:100%;
+}
+
+.mat-cell {
+  padding: 8px 40px 8px 0;
+}
+
+.tabela{
+  margin: 20px;
+  width: 1000px;
+}
+
+.prikaz{
+  display:flex;
+  justify-content: center;
+}
+
+.example-form {
+  min-width: 100px;
+  max-width: 300px;
+  width: 100%;
+  padding-top: 3rem;
+  margin:auto;
+}
+
+.example-option-img {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+[dir='rtl'] .example-option-img {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+mat-pagiantor{
+  margin-top: 1rem;
+}
+
+table {
+  width: 100%;
+}
+
+.not_approved{
+  color: lightgray;
+}

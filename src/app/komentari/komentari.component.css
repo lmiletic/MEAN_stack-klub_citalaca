@@ -1,0 +1,23 @@
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.prikaz{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.example-card{
+  width: 1000px;
+}

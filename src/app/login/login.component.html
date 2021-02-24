@@ -1,0 +1,22 @@
+<form class="example-form" (submit)="login(loginForm)" #loginForm="ngForm">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Korisničko ime</mat-label>
+    <input matInput required name="korisnickoIme" ngModel>
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Lozinka</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" required name="lozinka" ngModel>
+    <button mat-icon-button matSuffix type="button" (click)="hide=!hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+    <mat-hint ><a routerLink="/forgotPass">Zaboravili ste lozinku?</a></mat-hint>
+  </mat-form-field>
+  <div>
+    <button mat-stroked-button class="loginbutton" color="primary" type="submit">Prijavi se</button>
+    <button mat-flat-button class="loginbutton" color="primary" type="button" (click)="gostLogin()">Gost</button>
+  </div>
+  <span *ngIf="message!=''">{{message}}</span>
+</form>
+
+
+

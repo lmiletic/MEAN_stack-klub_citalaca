@@ -1,0 +1,21 @@
+.example-full-width {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+.example-option-img {
+  vertical-align: middle;
+}
+
+.example-card{
+  margin-top: 20px;
+  width: 1000px;
+}
+
+.prikaz{
+  display:flex;
+  justify-content: center;
+}

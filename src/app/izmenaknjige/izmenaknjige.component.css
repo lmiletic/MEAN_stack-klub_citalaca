@@ -1,0 +1,28 @@
+.example-form {
+  min-width: 100px;
+  max-width: 300px;
+  width: 100%;
+  padding-top: 3rem;
+  margin:auto;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+input[type="file"]{
+  visibility: hidden;
+}
+
+.prikaz-slike{
+  height: 5rem;
+  margin: 1rem 0;
+}
+
+.prikaz-slike img{
+  height: 100%;
+}

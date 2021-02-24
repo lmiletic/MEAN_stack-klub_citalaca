@@ -1,0 +1,29 @@
+.example-card {
+  width: 450px;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+button{
+  margin: 8px;
+}
+
+.trenutno{
+  margin: 15px 0 0 5px;
+}
+
+.prikaz{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.slika{
+  margin: 20px 0 20px 0;
+}
+
+img{
+  max-width:300px;
+}

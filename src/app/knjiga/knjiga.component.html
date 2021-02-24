@@ -1,0 +1,102 @@
+<div class="prikaz" *ngIf="isLoadingListe || isLoadingKnjiga">
+  <mat-spinner *ngIf="isLoadingListe || isLoadingKnjiga"></mat-spinner>
+</div>
+<div class="prikaz">
+  <mat-card class="example-card" *ngIf="!isLoadingListe && !isLoadingKnjiga">
+    <mat-card-header>
+      <mat-card-title>{{knjiga.naziv}}</mat-card-title>
+      <mat-card-subtitle>{{knjiga.autori}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div>
+        <button mat-flat-button color="warn" *ngIf="isAdmin()" (click)="izmeniKnjigu()">Izmeni</button>
+      </div>
+      <div class="prikaz slika">
+        <img mat-card-image [src]="knjiga.slika" alt="Slika knjige">
+      </div>
+      <p>
+        Zanr: {{knjiga.zanrovi}}
+      </p>
+      <p>
+        Datum izdavanja: {{knjiga.datumIzdavanja | date:'dd/MM/yyyy'}}
+      </p>
+      <p>
+        Opis:<br>
+        {{knjiga.opis}}
+      </p>
+      <p>
+        Ocena:<br>
+        <star-rating [value]="ocenaKnjiga" [totalstars]="10" size="18px" checkedcolor="gold" uncheckedcolor="gray" [readonly]="true"></star-rating>
+      </p>
+    </mat-card-content>
+    <mat-card-actions *ngIf="userLogged">
+      <p>Knjiga na listi:&nbsp;
+        <span *ngIf="proc">pročitane</span>
+        <span *ngIf="tren">trenutno čitanje</span>
+        <span *ngIf="kasn">kasnije čitanje</span>
+        <span *ngIf="!proc && !tren && !kasn">-</span>
+      </p>
+      <div class="prikaz">
+        <button mat-raised-button (click)="procitana()" color="primary" [disabled]="proc">Pročitana</button>
+        <button mat-raised-button (click)="trenutno()" color="accent" [disabled]="tren || disable">Trenutno čitam</button>
+        <button mat-raised-button (click)="kasnije()" color="warn" [disabled]="disable" *ngIf="!kasn">Kasnije čitanje</button>
+        <button mat-raised-button (click)="kasnijeUkloni()" color="warn" [disabled]="disable" *ngIf="kasn">Ukloni kasnije čitanje</button>
+      </div>
+      <div *ngIf="tren">
+        <mat-form-field appearance="fill" class="trenutno">
+          <mat-label>Trenutno</mat-label>
+          <input matInput type="number" [(ngModel)]="trenStigao">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="trenutno">
+          <mat-label>Ukupno</mat-label>
+          <input matInput type="number" min="1" [(ngModel)]="trenUkupno">
+        </mat-form-field>
+        <br>
+        <div class="trenunto">
+          <mat-progress-bar *ngIf="tren"
+            color="primary"
+            mode="determinate"
+            [value]="trenStigao/trenUkupno*100">
+        </mat-progress-bar>
+        </div>
+        <br>
+        <button mat-stroked-button color="accent" (click)="sacuvajTrenunto()">Sačuvaj</button>
+        <span *ngIf="message!=''">
+          {{message}}
+        </span>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<div class="prikaz">
+  <mat-card class="example-card" *ngIf="!isLoadingListe && !isLoadingKnjiga && userLogged && (procitanoPola || proc)">
+    <mat-card-header>
+      <mat-card-title>
+        Moji komentar
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form (submit)="sacuvajKomentar()" [formGroup]="komentarForma">
+        <p>
+          Ocena:
+          <star-rating [value]="ocenaKomentar" [totalstars]="10" size="18px" checkedcolor="gold" uncheckedcolor="gray" [readonly]="!editKomentar" (rate)="onRate($event)"></star-rating>
+        </p>
+        <mat-form-field class="example-full-width">
+          <mat-label>Vaš komentar</mat-label>
+          <textarea matInput formControlName="komentar" placeholder="..." [readonly]="!editKomentar"></textarea>
+          <mat-hint align="end">Broj reči {{komentarForma.get("komentar").value.length==0? 0: komentarForma.get("komentar").value.split(' ').length }} / 1000</mat-hint>
+          <mat-error *ngIf="komentarForma.hasError('brReci')">Maksimaln broj reci je 1000</mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="accent" *ngIf="editKomentar" type="submit">Sačuvaj</button>
+        <button mat-raised-button color="primary" *ngIf="!editKomentar" type="button" (click)="edit()">Izmeni</button>
+        <span *ngIf="messageKomentar!=''">
+          {{messageKomentar}}
+        </span>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+<app-komentari [idKnjige]="idKnjige" [userLogged]="userLogged" [korisnickoIme]="korisnickoIme" *ngIf="!isLoadingListe && !isLoadingKnjiga"></app-komentari>
+
+

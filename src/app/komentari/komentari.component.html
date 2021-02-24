@@ -1,0 +1,45 @@
+<div class="prikaz" *ngIf="isLoading">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+</div>
+<div class="prikaz">
+  <mat-card *ngIf="!isLoading" class="example-card">
+    <mat-card-header>
+      <mat-card-title>
+        Komentari
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="example-action-buttons">
+        <button mat-button (click)="accordion.openAll()">Prikazi sve</button>
+        <button mat-button (click)="accordion.closeAll()">Skupi sve</button>
+      </div>
+      <mat-accordion class="example-headers-align" multi>
+        <mat-expansion-panel *ngFor="let komentar of komentari">
+          <mat-expansion-panel-header>
+            <mat-panel-title *ngIf="userLogged" (click)="korisnikPrikaz(komentar.korisnickoIme)">
+              {{komentar.korisnickoIme}}
+            </mat-panel-title>
+            <mat-panel-title *ngIf="prikazKorisnik" (click)="knjigaPrikaz(komentar.knjigaId)">
+              {{knjigaNaziv(komentar.knjigaId)}}
+            </mat-panel-title>
+            <mat-panel-description *ngIf="prikazKorisnik">
+              {{knjigaAutori(komentar.knjigaId)}}
+            </mat-panel-description>
+            <mat-panel-description>
+              <star-rating [value]="komentar.ocena" [totalstars]="10" size="18px" checkedcolor="gold" uncheckedcolor="gray" readonly="true"></star-rating>
+              <mat-icon>comment</mat-icon>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Komentar</mat-label>
+            <textarea matInput placeholder="..." readonly="true">{{komentar.komentar}}</textarea>
+          </mat-form-field>
+
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+

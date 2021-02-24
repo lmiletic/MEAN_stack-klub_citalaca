@@ -1,0 +1,20 @@
+.my-toolbar {
+  position: fixed;
+  top: 0;
+}
+
+.footer{
+  background-color: #3f51b5;
+  height: 150px;
+  position: relative;
+  bottom: 0;
+  color: azure;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content{
+  padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+}

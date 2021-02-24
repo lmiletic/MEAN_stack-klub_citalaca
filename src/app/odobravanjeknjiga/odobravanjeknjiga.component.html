@@ -1,0 +1,77 @@
+<div *ngIf="isLoading" class="prikaz">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+</div>
+<div class="prikaz">
+  <mat-card *ngIf="!isLoading" class="example-card">
+    <mat-card-header>
+      <mat-card-title>
+        Knjige koje čekaju na odobrenje
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table mat-table [dataSource]="neodobreneKnjige" multiTemplateDataRows class="mat-elevation-z8">
+
+        <ng-container matColumnDef="naziv">
+          <th mat-header-cell *matHeaderCellDef>Naziv</th>
+          <td mat-cell *matCellDef="let knjiga" (click)="expandedKnjiga = expandedKnjiga === knjiga ? null : knjiga"> {{knjiga.naziv}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="autori">
+          <th mat-header-cell *matHeaderCellDef>Autori</th>
+          <td mat-cell *matCellDef="let knjiga" (click)="expandedKnjiga = expandedKnjiga === knjiga ? null : knjiga"> {{knjiga.autori}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="datumIzdavanja">
+          <th mat-header-cell *matHeaderCellDef>Datum izdavanja</th>
+          <td mat-cell *matCellDef="let knjiga" (click)="expandedKnjiga = expandedKnjiga === knjiga ? null : knjiga"> {{knjiga.datumIzdavanja |  date:'dd/MM/yyyy'}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="zanrovi">
+          <th mat-header-cell *matHeaderCellDef >Zanrovi</th>
+          <td mat-cell *matCellDef="let knjiga" (click)="expandedKnjiga = expandedKnjiga === knjiga ? null : knjiga"> {{knjiga.zanrovi}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="odobravanje">
+          <th mat-header-cell *matHeaderCellDef>Odobravanje</th>
+          <td mat-cell *matCellDef="let knjiga">
+            <button mat-mini-fab color="primary" type="button" (click)="odobri(knjiga._id)">
+              <mat-icon>done</mat-icon>
+            </button>
+            <button mat-mini-fab color="warn" type="button" (click)="izbrisi(knjiga._id)">
+              <mat-icon>clear</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="expandedDetail">
+          <td mat-cell *matCellDef="let knjiga" [attr.colspan]="kolonePrikaz.length">
+            <div class="example-element-detail"
+                 [@detailExpand]="knjiga == expandedKnjiga ? 'expanded' : 'collapsed'">
+              <div class="example-element-diagram">
+                <div><img aria-hidden [src]="knjiga.slika" height="60"></div>
+              </div>
+              <div class="example-element-description">
+                {{knjiga.opis}}
+              </div>
+            </div>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="kolonePrikaz"></tr>
+        <tr mat-row *matRowDef="let knjiga; columns: kolonePrikaz;"
+        class="example-element-row"
+        [class.example-expanded-row]="expandedKnjiga === knjiga">
+        </tr>
+        <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+
+
+      </table>
+      <div *ngIf="neodobreneKnjige.length==0" style="text-align: center;">
+        <p style="padding-top: 20px;">
+          Nema knjiga na čekanju
+        </p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+

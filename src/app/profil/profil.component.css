@@ -1,0 +1,17 @@
+.example-container {
+  position: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+  min-height: calc(100vh - 60px);
+}
+
+.nav-button{
+  min-width: 150px;
+}
+
+.icon{
+  padding-right: 5px;
+}

@@ -1,0 +1,30 @@
+.mat-row {
+  height: auto;
+}
+
+.prikaz{
+  display: flex;
+  justify-content: center;
+}
+
+.mat-cell {
+  padding: 8px 40px 8px 0;
+}
+
+.example-form {
+  min-width: 100px;
+  max-width: 300px;
+  width: 100%;
+  padding-top: 3rem;
+  margin:auto;
+}
+
+table {
+  width: 100%;
+}
+
+.example-card {
+  margin: 20px;
+  width: 800px;
+}
+

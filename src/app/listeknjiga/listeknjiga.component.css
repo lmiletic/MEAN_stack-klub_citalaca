@@ -1,0 +1,31 @@
+.example-card {
+  width: 1000px;
+  margin: 20px;
+}
+
+.prikaz{
+  display:flex;
+  justify-content: center;
+}
+
+table{
+  width: 100%;
+}
+
+.pie{
+  display: flex;
+  justify-content: center;
+}
+
+canvas{
+  max-width: 600px;
+}
+
+.mat-row {
+  height: auto;
+}
+
+
+.mat-cell {
+  padding: 8px 40px 8px 0;
+}

@@ -1,0 +1,61 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav mode="side" opened>
+    <mat-nav-list>
+      <a mat-list-item routerLink="./" *ngIf="isLogged">
+        <mat-icon class="icon" aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+        Profil
+      </a>
+      <a mat-list-item routerLink="./listeknjiga" *ngIf="isLogged">
+        <mat-icon class="icon" aria-hidden="false" aria-label="Example list icon">list</mat-icon>
+        Liste knjiga
+      </a>
+      <a mat-list-item routerLink="./komentari" *ngIf="isLogged">
+        <mat-icon class="icon" aria-hidden="false" aria-label="Example comment icon">textsms</mat-icon>
+        Moji komentari
+      </a>
+      <a mat-list-item routerLink="./dodajknjigu" *ngIf="isLogged">
+        <mat-icon class="icon" aria-hidden="false" aria-label="Example book icon">book</mat-icon>
+        Dodaj knjigu
+      </a>
+      <a mat-list-item routerLink="./pretragakorisnika"  *ngIf="isLogged">
+        <mat-icon class="icon" aria-hidden="false" aria-label="Example person_search icon">person_search</mat-icon>
+        Pretraga korisnika
+      </a>
+      <a mat-list-item routerLink="./pretragaknjiga">
+        <mat-icon class="icon" aria-hidden="false" aria-label="Example search icon">search</mat-icon>
+        Pretraga knjiga
+      </a>
+      <a mat-list-item routerLink="./pregleddesavanja">
+        <mat-icon class="icon" aria-hidden="false" aria-label="Example calendar_today icon">calendar_today</mat-icon>
+        Pregled dešavanja
+      </a>
+      <a mat-list-item routerLink="./dodajdesavanje" *ngIf="isLogged">
+        <mat-icon class="icon" aria-hidden="false" aria-label="Example post_add icon">post_add</mat-icon>
+        Dodaj dešavanje
+      </a>
+      <a mat-list-item routerLink="./odobravanjeknjiga" *ngIf="isLogged && (isAdmin || isMod)">
+        <mat-icon class="icon" aria-hidden="false" aria-label="Example library_add_check icon">library_add_check</mat-icon>
+        Odobravanje knjiga
+      </a>
+      <a mat-list-item routerLink="./odobravanjekorisnika" *ngIf="isLogged && isAdmin">
+        <mat-icon class="icon" aria-hidden="false" aria-label="Example verified_user icon">verified_user</mat-icon>
+        Odobravanje korisnika
+      </a>
+      <a mat-list-item routerLink="./dodajkorisnika" *ngIf="isLogged && isAdmin">
+        <mat-icon class="icon" aria-hidden="false" aria-label="Example person_add icon">person_add</mat-icon>
+        Dodaj novog korisnika
+      </a>
+      <a mat-list-item routerLink="./zanrovi" *ngIf="isLogged && isAdmin">
+        <mat-icon class="icon" aria-hidden="false" aria-label="Example edit icon">edit</mat-icon>
+        Uredjivanje žanrova
+      </a>
+      <a mat-list-item routerLink="./upravljanjeulogama" *ngIf="isLogged && isAdmin">
+        <mat-icon class="icon" aria-hidden="false" aria-label="Example admin_panel_settings icon">admin_panel_settings</mat-icon>
+        Upravljanje ulogama
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

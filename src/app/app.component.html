@@ -1,0 +1,14 @@
+<p>
+  <mat-toolbar color="primary">
+    <span>Ljubitelji knjiga</span>
+    <button mat-flat-button color="primary" (click)="prijaviSe()" *ngIf="!isLogged()">Prijavi se</button>
+    <button mat-flat-button color="primary" *ngIf="isLogged()" (click)="logout()">Odjavi se</button>
+    <button mat-flat-button color="primary" (click)="registrujSe()" *ngIf="!isLogged()">Registracija</button>
+  </mat-toolbar>
+</p>
+<router-outlet></router-outlet>
+<div class="footer">
+  <div class="footer-content">
+    <div>Luka Miletić 2016/0396</div>
+  </div>
+</div>

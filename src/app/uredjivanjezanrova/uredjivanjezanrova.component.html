@@ -1,0 +1,34 @@
+<div class="prikaz" *ngIf="isLoading">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+</div>
+<div class="prikaz">
+  <mat-card class="example-card" *ngIf="!isLoading">
+    <mat-card-header>
+      <mat-card-title>
+        Uredjivanje žanrova
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="example-form">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Prikaz svih žanrova</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let zanr of sviZanrovi" value="{{zanr}}">{{zanr}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Izaberite žanr za brisanje</mat-label>
+        <mat-select [(ngModel)]="zaBrisanje">
+          <mat-option *ngFor="let zanr of zanroviBrisanje" value="{{zanr}}">{{zanr}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-flat-button color="warn" (click)="obrisi()">Obriši</button>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Dodajte novi žanr</mat-label>
+        <input matInput [(ngModel)]="noviZanr">
+      </mat-form-field>
+      <button mat-flat-button color="primary" (click)="dodajNovi()">Dodaj</button>
+      <div *ngIf="message">{{message}}</div>
+    </mat-card-content>
+  </mat-card>
+</div>
+

@@ -1,0 +1,28 @@
+<form class="example-form" [formGroup]="formLozinka" (submit)="resetpass()">
+  <div>
+    <ul class="mat-body">
+      <li>minimalno 7 karaktera</li>
+      <li>počinje slovom</li>
+      <li>bar jedno veliko slovo</li>
+      <li>bar jedan broj</li>
+      <li>bar jedan simbol</li>
+    </ul>
+    </div>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Nova lozinka</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" formControlName="novaLozinka">
+    <mat-error *ngIf="formLozinka.get('novaLozinka').invalid">Format šifre nije dobar</mat-error>
+    <button mat-icon-button matSuffix class="oko" type="button" (click)="hide=!hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Ponovite novu lozinku</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" formControlName="ponovljenaNovaLozinka">
+    <mat-error *ngIf="formLozinka.hasError('nisuIste')">Lozinke se ne poklapaju</mat-error>
+  </mat-form-field>
+  <button mat-raised-button type="submit "color="warn">Promeni</button>
+  <div style="margin-top: 10px;"*ngIf="message">
+    {{message}}
+  </div>
+</form>

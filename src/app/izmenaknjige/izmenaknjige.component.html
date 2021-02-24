@@ -1,0 +1,61 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Izmenite knjigu</mat-card-title>
+  </mat-card-header>
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <mat-card-content *ngIf="!isLoading">
+    <form class="example-form" [formGroup]="form" (submit)="izmeniKnjigu()">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Naziv knjige</mat-label>
+        <input matInput formControlName="naziv">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Autor 1</mat-label>
+        <input matInput formControlName="autori">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill" *ngFor="let autor of autori;index as i;trackBy: trackByFn">
+        <mat-label>Autor {{i+2}}</mat-label>
+        <input matInput [(ngModel)]="autori[i]" [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
+      <div>
+        <button mat-button type="button" (click)="josAutora()" [disabled]="brojAutora==3">Dodaj još autora</button>
+      </div>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Izaberite žanr</mat-label>
+        <mat-select formControlName="zanrovi" (selectionChange)="changed()" multiple>
+          <mat-option *ngFor="let zanr of zanrovi" [value]="zanr">
+            {{zanr}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <button mat-button type="button" (click)="filePicker.click()">Izaberite sliku</button>
+        <input type="file" accept="image/*" #filePicker (change)="izaberiSliku($event)">
+      </div>
+      <div class="prikaz-slike" *ngIf="slikaPregled !== '' && slikaPregled">
+        <img [src]="slikaPregled" alt="Prikaz slike">
+      </div>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Opis</mat-label>
+        <textarea matInput formControlName="opis"></textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Datum izdavanja</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="datumIzdavanja">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <button mat-stroked-button color="primary" type="submit">Izmeni knjigu</button>
+    </form>
+    <p>
+      {{message}}
+    </p>
+  </mat-card-content>
+</mat-card>
+
+
+
+
+
+
+

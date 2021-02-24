@@ -1,0 +1,16 @@
+.example-form {
+  min-width: 100px;
+  max-width: 300px;
+  width: 100%;
+  padding-top: 5rem;
+  margin:auto;
+  height: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.loginbutton{
+  margin: 8px;
+}
